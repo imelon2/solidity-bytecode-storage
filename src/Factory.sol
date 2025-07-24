@@ -5,11 +5,14 @@ import {Create2} from "@openzeppelin/contracts/utils/Create2.sol";
 
 
 abstract contract Factory {
-    struct EscrowInfo {
-        address _shipper; // shipper의 주소
-        address _carrier; // carrier의 주소
-        uint256 _deliveryCost; // shipper의 운송비용
-    }
+struct EscrowInfo {
+    address _shipper;      // 1. shipper의 주소
+    address _carrier;      // 2. carrier의 주소
+    uint256 _deliveryCost; // 3. 운송 비용
+    uint256 _startTime;    // 4. 운송 시작 시간
+    uint256 _endTime;      // 5. 운송 종료 시간
+    bool _isDelivered;     // 6. 배송 완료 여부
+}
 
     
     error Create2FailedDeployment(); 
@@ -43,10 +46,10 @@ abstract contract Factory {
     {
         return
             abi.encodePacked(
-                hex"3d60", // RETURDATASIZE, PUSH2
-                uint8(0x2d + data.length), // size of minimal proxy (45 bytes) + size of data
-                hex"8060",
-                hex"0b",
+                hex"3d60",                         // RETURDATASIZE, PUSH2
+                uint8(0x2d+data.length),          // size of minimal proxy (45 bytes) + size of data
+                hex"80",                           // DUP1
+                hex"600a",                         // creation code length
                 hex"3d3981f3363d3d373d3d3d363d73", // DUP1, PUSH1, default offset 0a, standard EIP1167 implementation
                 implementation,                          // implementation address
                 hex"5af43d82803e903d91602b57fd5bf3",     // standard EIP1167 implementation
