@@ -1,0 +1,168 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					}
+				],
+				"name": "getEscrowInfo",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "id",
+								"type": "uint256"
+							},
+							{
+								"internalType": "address",
+								"name": "depositor",
+								"type": "address"
+							},
+							{
+								"internalType": "address",
+								"name": "beneficiary",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "amount",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "deadline",
+								"type": "uint256"
+							},
+							{
+								"internalType": "enum SimpleEscrowLegacy.EscrowStatus",
+								"name": "status",
+								"type": "uint8"
+							}
+						],
+						"internalType": "struct SimpleEscrowLegacy.EscrowInfo",
+						"name": "info",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "id",
+								"type": "uint256"
+							},
+							{
+								"internalType": "address",
+								"name": "depositor",
+								"type": "address"
+							},
+							{
+								"internalType": "address",
+								"name": "beneficiary",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "amount",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "deadline",
+								"type": "uint256"
+							},
+							{
+								"internalType": "enum SimpleEscrowLegacy.EscrowStatus",
+								"name": "status",
+								"type": "uint8"
+							}
+						],
+						"internalType": "struct SimpleEscrowLegacy.EscrowInfo",
+						"name": "info",
+						"type": "tuple"
+					}
+				],
+				"name": "saveEscrowInfo",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"src/sample/SimpleEscrow.sol": "SimpleEscrowLegacy"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": [
+			":@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/"
+		]
+	},
+	"sources": {
+		"src/BytecodeStorage.sol": {
+			"keccak256": "0x8e2486c8225405548b91b6a06b9cf3b787d423f064a9002a48a757b25d4fa707",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://dd3d818eaf34be22cc19de1f684eed3573eae80f62b682ce02c74397690e0bfc",
+				"dweb:/ipfs/QmY9Tpc5ivmZoMLGQyopv7e3G1wns6iDtL6hcr4xeTs97X"
+			]
+		},
+		"src/BytecodeStorageFactory.sol": {
+			"keccak256": "0x530256d97d29bf2d5b1615eaea5ab3aa30f61585a7bed95699935e23d378edd0",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://1c36f0b40f2d67a5bc4489762a275ebe0c666bbbb3b0023e16045900076e516c",
+				"dweb:/ipfs/QmdKSGbx7Ef1vWuVpxGhQximxEMj63uP4bsY8NvTUqk8ji"
+			]
+		},
+		"src/BytecodeStorageLibs.sol": {
+			"keccak256": "0xe62baaf5f8075300e4fdc7148e5560a6174c94204d207728a27bdee4973c197b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://92f6415857547738e09a61636515ac928673ab6a44fe9502321feaf60fbc1ab2",
+				"dweb:/ipfs/QmSA9Dqi4Kyqj3aERkcUtTZuA52Egir2KCExoF2c4856rF"
+			]
+		},
+		"src/sample/SimpleEscrow.sol": {
+			"keccak256": "0x051a30ef6b378c464ac6fc5ca13c82bb9541daf20fbde0012598ddb54a7eb981",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://bb77d47b03d3b473bb5770e1430cfc5fb7d1846dfdf2943ebe3d32518a907476",
+				"dweb:/ipfs/QmeyWNMQJcv9mgMUmybbwwDo3PfCXwKRKtcSz8En9tmv41"
+			]
+		}
+	},
+	"version": 1
+}
